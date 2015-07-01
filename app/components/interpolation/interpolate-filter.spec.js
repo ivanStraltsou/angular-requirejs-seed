@@ -1,12 +1,12 @@
 /* global describe, it, expect, beforeEach, afterEach, module, inject */
 'use strict';
 
-define(['app', 'angularMocks'], function(app) {
-	describe('myApp.version module', function() {
-		beforeEach(module('myApp.version'));
+define(['app', 'angularMocks'], function(app, mocks) {
+	describe('myApp.interpolation module', function() {
+		beforeEach(mocks.module('myApp.interpolation'));
 
 		describe('interpolate filter', function() {
-			beforeEach(module(function($provide) {
+			beforeEach(mocks.module(function($provide) {
 				$provide.value('version', 'TEST_VER');
 			}));
 
